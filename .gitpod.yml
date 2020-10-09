@@ -1,0 +1,4 @@
+tasks:
+  - init: "make full_install"
+  - command: "git config --global user.email $GH_PRIVATE_EMAIL"
+  - command: "git log --oneline -n 3 && git status"

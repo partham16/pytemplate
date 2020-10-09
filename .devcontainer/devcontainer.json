@@ -1,0 +1,98 @@
+// Source : https://github.com/microsoft/vscode-dev-containers/blob/master/containers/python-3/.devcontainer/devcontainer.json
+//
+{
+    "name": "Python 3.6",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.6",
+    // "build": {
+    //     "dockerfile": "Dockerfile",
+    //     "context": "..",
+    //     "args": {
+    //         // Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8 
+    //         "VARIANT": "3",
+    //         // Options
+    //         "INSTALL_NODE": "true",
+    //         "NODE_VERSION": "lts/*"
+    //     }
+    // },
+    //
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.shell.linux": "/usr/bin/zsh",
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+        "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+        "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+        "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+        "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+        "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+        "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+        "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+        // from vscode -> settings.json file
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "editor.formatOnSave": true,
+        "editor.largeFileOptimizations": false,
+        "git.ignoreMissingGitWarning": true,
+        "python.dataScience.sendSelectionToInteractiveWindow": true,
+        "python.formatting.provider": "black",
+        "typescript.locale": "en",
+        "timeline.excludeSources": [],
+        "python.linting.mypyEnabled": true,
+        "python.linting.flake8Enabled": true,
+        "telemetry.enableTelemetry": false,
+        "telemetry.enableCrashReporter": false,
+        "githubPullRequests.telemetry.enabled": false,
+        "workbench.colorTheme": "Default Dark+",
+        "kite.showWelcomeNotificationOnStartup": false,
+        "explorer.confirmDragAndDrop": false,
+        "editor.suggestSelection": "first",
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+        "vsicons.dontShowNewVersionMessage": true,
+        "python.languageServer": "Pylance",
+        "settingsSync.ignoredSettings": [],
+        "settingsSync.ignoredExtensions": [
+            //"yzhang.markdown-all-in-one"
+        ],
+        "workbench.colorCustomizations": {
+            "[Default Dark+]": {}
+        },
+        "python.analysis.completeFunctionParens": true,
+        "python.analysis.typeCheckingMode": "basic",
+        "codespaces.defaultExtensions": [
+            //"Default Dark+",
+            "ms-vsonline.vsonline",
+            "GitHub.vscode-pull-request-github",
+            "ms-vsliveshare.vsliveshare",
+            "visualstudioexptteam.vscodeintellicode",
+            "ms-python.vscode-pylance",
+            "ms-python.python",
+            "njpwerner.autodocstring",
+            "ms-azuretools.vscode-docker",
+            "donjayamanne.githistory",
+            "vscode-icons-team.vscode-icons",
+            "redhat.vscode-yaml"
+        ],
+        "workbench.iconTheme": "vscode-icons",
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "ms-vsonline.vsonline",
+        "GitHub.vscode-pull-request-github",
+        "ms-vsliveshare.vsliveshare",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "ms-azuretools.vscode-docker",
+        "donjayamanne.githistory",
+        "vscode-icons-team.vscode-icons",
+        "redhat.vscode-yaml"
+    ],
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "make full_install",
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    // "remoteUser": "vscode"
+}
