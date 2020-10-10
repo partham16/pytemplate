@@ -1,0 +1,21 @@
+name: CI/CD
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+jobs:
+  build:
+    name: run install and check
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: setup python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: use makefile
+        run: |
+          make full_install
+          make fullcheck

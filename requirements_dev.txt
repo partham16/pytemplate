@@ -6,7 +6,7 @@
 
 pre-commit
 flake8
-#black
+black
 pytest
 isort
 pylint
