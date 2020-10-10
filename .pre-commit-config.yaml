@@ -10,7 +10,8 @@ repos:
       - id: check-added-large-files
       - id: check-ast
       - id: check-json
-        exclude: .devcontainer/*
+        exclude: (.devcontainer/*.json|.vscode/launch.json)
+        # https://gitlab.idiap.ch/beat/beat.core/blob/master/.pre-commit-config.yaml
   - repo: https://gitlab.com/pycqa/flake8
     rev: 8f9b4931b9a28896fb43edccb23016a7540f5b82
     hooks:

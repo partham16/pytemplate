@@ -11,7 +11,7 @@ full_install: develop install
 
 precommit:
 	git add .
-	pre-commit run
+	pre-commit run --all-files
 	git add .
 
 black:

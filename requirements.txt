@@ -3,4 +3,3 @@
 --trusted-host files.pythonhosted.org
 --trusted-host raw.githubusercontent.com
 --trusted-host github.com
-
