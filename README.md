@@ -5,7 +5,7 @@ Creating a <u>template</u> repo for `Python` with **black, flake8, pylint, mypy,
 > Also, adding `devcontainer.json` file for *remote* **codespaces** settings
 
 ## Formatting **`devcontainer.json`**
- >> includes `settings.json` info - can be set up in [**`.vscode/settings.json`**](https://vscode.readthedocs.io/en/latest/getstarted/settings/) too (*works for local too*) 
+ >> includes `settings.json` info - can be set up in [**`.vscode/settings.json`**](https://vscode.readthedocs.io/en/latest/getstarted/settings/) too (*works for local too*)
 - [`vscode-dev-containers` for `python3`](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3)
  > includes both `devcontainer.json` and `Dockerfile`
 - [Remote containers - *getting started*](https://code.visualstudio.com/docs/remote/containers#_getting-started)

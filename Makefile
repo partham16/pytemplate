@@ -18,19 +18,20 @@ black:
 	black src tests
 
 isort:
-	isort .
+	isort src tests
 
 pylint:
-	pylint src tests
+	pylint src tests --min-public-methods 0
 
 mypy:
-	mypy src tests
+	mypy src tests --ignore-missing-imports
 
 flake:
-	flake8 src tests
+	flake8 src tests --ignore=E501
 
 test:
-	pytest tests/*
+	## pytest tests/*
+	echo "No tests set yet"
 
 check: black flake test precommit
 
