@@ -1,8 +1,8 @@
 // Source : https://github.com/microsoft/vscode-dev-containers/blob/master/containers/python-3/.devcontainer/devcontainer.json
 //
 {
-    "name": "Python 3.6",
-    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.6",
+    "name": "Python 3 (latest)",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3",
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "context": "..",
@@ -18,7 +18,8 @@
     // Set *default* container specific settings.json values on container create.
     "settings": {
         "terminal.integrated.shell.linux": "/usr/bin/zsh",
-        "python.pythonPath": "/usr/local/bin/python",
+        //"python.pythonPath": "/usr/local/bin/python",
+        "python.pythonPath": "/opt/python/latest/bin/python3.8",
         "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
         "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
         "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
